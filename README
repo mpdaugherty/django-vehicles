@@ -1,0 +1,37 @@
+django-vehicles 1.0 README
+March 30, 2011
+
+== Intro ==
+Django-vehicles is an django application that simplifies adding information about automobile makes and models to your django website.  It provides a database of cars from 1949-2010, Django models that represent car makes and models, and a form field for easy selection by your users.
+
+== Requirements ==
+This software was written with python 2.6, Django 1.2.4, and jQuery 1.4+ and is not guaranteed to work perfectly on previous versions.  However, if you have any trouble setting it up, please contact django-vehicles@mpdaugherty.com.
+
+== Installation Instructions ==
+Please read setup.txt for installation instructions.
+
+== Contact information ==
+For any support, feature requests, or answers to life's most difficult questions, you can contact me at django-vehicles@mpdaugherty.com.
+
+== Legal Information and license ==
+This software is distributed under the MIT license, included below:
+
+Copyright (C) 2011 by Michael P. Daugherty, http://www.mpdaugherty.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

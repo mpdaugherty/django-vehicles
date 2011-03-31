@@ -1,0 +1,56 @@
+1.  Copy the 'vehicles/' folder into your project folder:
+
+    cp -r django-vehicles/vehicles/ <project>/vehicles
+
+2.  Add 'vehicles' to INSTALLED_APPS in <project>/settings.py
+
+    INSTALLED_APPS = (
+        'django.contrib.auth',
+        [...]
+        'vehicles',
+    )
+
+3.  Run 'python manage.py syncdb' to load all the vehicle information into your database
+4.  Include the vehicles urls in your urls.py
+
+    urlpatterns = patterns('',
+        [...]
+        (r'^vehicles/', include('vehicles.urls')),
+    )
+
+5.  Copy vehicles/static/selector.js to your media directory.
+
+    mkdir <MEDIA>/vehicles
+    cp vehicles/static/selector.js <MEDIA>/vehicles/selector.js
+
+6.  If you chose to include 'vehicles.urls' in a path other than 'vehicles', you will also have to
+update the first line of selector.js to reflect that.
+
+    var VEHICLE_ROOT = "/<Your Vehicles Path>/";
+
+7.  To use a CarModel in one of your application's models, just include a ForeignKey to vehicles.models.CarModel:
+
+    from vehicles.models import CarModel
+    class YourClass(models.Model):
+        car_model = models.ForeignKey(CarModel)
+
+8.  When you create a ModelForm for your model, just use a vehicles.forms.CarModelField for the correct property
+
+    from models import YourClass
+    from vehicles.forms import CarModelField
+
+    class YourClassForm(forms.ModelForm):
+        car_model = CarModelField()
+
+        class Meta:
+            model = YourClass
+
+9. Finally, when you include your form in a template, you must also include {{ form.media }} so that the vehicle selector
+javascript files are included.
+
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit"/>
+    </form>
+    {{ form.media }}
