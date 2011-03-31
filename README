@@ -1,7 +1,7 @@
 django-vehicles 1.0 README
 March 30, 2011
 
-== Intro ==
+==Intro==
 Django-vehicles is an django application that simplifies adding information about automobile makes and models to your django website.  It provides a database of cars from 1949-2010, Django models that represent car makes and models, and a form field for easy selection by your users.
 
 == Requirements ==
